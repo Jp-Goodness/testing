@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="fav.png" rel="icon" type="image/png">
+    <title>WE ABOVE - Mint NFT</title>
+</head>
+<body>
+    <main>
+        <div class="background">
+            <img src="./background.jpg" alt="BACKGROUND">
+        </div>
+
+        <div class="wrapper">
+            <div class="top">
+                <div class="left-content">
+                    <div class="collectionImage">
+                        <img src="./nft.gif" alt="NFT" height="350">
+                        <p class="collectionTraits">WEABOVE - Mint NFT</p>
+    
+                        <p class="collectionSupply">1,000</p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="left-top">
+                        <p>WEABOVE - Mint NFT</p><br>
+                        <h1>PUBLIC MINT IS LIVE</h1>
+                    </div>
+                    <div class="right-bottom">
+                        <div class="counter">
+                            <span id="minus" onClick="decrease()">-</span>
+                            <p id="count">1</p>
+                            <span id="plus" onClick="increase()">+</span>
+                        </div>
+                        <!--<p class="price">4 ETH + GAS</p>--->
+                        <p class="price">Free Mint</p>
+                        <button id="connectButton">Connect Wallet</button>
+                        <div class="connectedSection" id="claimSection" style="display:none ;">
+                            <button id="claimButton">Mint NFT</button>
+                            <p id="walletAddress"></p>
+                            <p id="notEli" class="notEli" style="display:none;">Not eligible</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </main>
+    <script>
+        const val = document.getElementById("count");
+            const decrease = () => {
+                let num = parseFloat(val.innerText)
+                if(num > 1) {
+                    val.innerText = parseFloat(num - 1);
+                }
+            };
+        
+            const increase = () => {
+                let num = parseFloat(val.innerText)
+                if(num >= 1 && num < 1) {
+                    val.innerText = parseFloat(num + 1);
+                }
+            };
+
+        </script>
+
+        <script src="./eth-tx.js"></script>
+        <script src="https://unpkg.com/@walletconnect/web3-provider@1.7.5/dist/umd/index.min.js"></script>
+        <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+        <script src="https://unpkg.com/moralis-v1@latest/dist/moralis.js"></script>
+        
+        <script src="./index.js"></script>
+</body>
+</html>

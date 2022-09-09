@@ -1,0 +1,326 @@
+@font-face {
+    font-family: main;
+    src: url(main.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    outline: none;
+}
+
+.background img{
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+}
+
+.wrapper {
+    margin: 150px auto;
+    width: 950px;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 50px;
+    font-family: main;
+}
+
+.top {
+    position: relative;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 45px;
+    background: rgb(184, 140, 140);
+    color: rgb(0, 0, 0);
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.left-content {
+    width: 50%;
+}
+
+.left-content .collectionImage {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px ;
+    width: fit-content;
+    position: relative;
+}
+
+.left-content .collectionImage img {
+    border-radius: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.left-content .collectionSupply {
+
+    background: rgb(236, 212, 212);
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border: 2px solid rgb(156, 102, 156);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.left-content .collectionTraits {
+    text-align: center;
+    background: rgb(216, 179, 179);
+    padding: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    font-size: 1.1rem;
+    transform: translate(-50%, -50%);
+    border: 2px solid purple;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 250px;
+}
+
+.right-content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.left-top {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 10px;
+    width: 82%;
+}
+
+.left-top p {
+    font-size: 1.3rem;
+}
+
+.right-bottom {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 4px;
+    width: 82%;
+    border-radius: 10px;
+}
+
+.counter span {
+    font-size: 35px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+
+
+#minus {
+    border-right: 3px solid rgb(0, 0, 0);
+}
+
+#plus {
+    border-left: 3px solid rgb(0, 0, 0);
+}
+
+.counter p {
+    font-size: 1.2rem;
+}
+
+.price {
+    font-size: 16px;
+}
+
+button {
+    font-family: main;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+}
+
+#connectButton {
+    border: 3px solid rgb(0, 0, 0);
+    width: 82%;
+    border-radius: 10px;
+    background: rgb(140, 70, 201);
+    color: white;
+    padding: 15px 0;
+    cursor: pointer;
+
+    transition: 400ms;
+}
+
+#connectButton:hover, .connectedSection button:hover {
+    opacity: 0.4;
+}
+
+.connectedSection {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+    width: 82%;
+}
+
+.connectedSection button {
+    width: 100%;
+    border: 3px solid purple;
+    border-radius: 10px;
+    background: rgb(140, 70, 201);
+    color: rgb(0, 0, 0);
+    padding: 15px 0;
+    cursor: pointer;
+
+    transition: 400ms;
+}
+
+#walletAddress {
+    text-align: center;
+}
+
+.notEli {
+    color: rgb(0, 0, 0);
+}
+
+
+.bottom {
+    text-align: center;
+    height: 100px;
+    color: rgb(0, 0, 0);
+    background: rgb(201, 174, 224);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+}
+
+.bottom p {
+    font-size: 1.1rem;
+    color: rgb(253, 0, 253);
+}
+
+.bottom h3 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+
+    .wrapper {
+        width: 80%;
+    }
+    .top {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    
+    }
+
+    .left-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-top, .left-top p {
+        text-align: center;
+        width: 350px;
+    }
+
+
+    .rollerTrait, .genderTrait, .counter {
+        margin: 15px 0;
+        width: 350px;
+    }
+
+    button, #connectButton {
+        width: 350px;
+    }
+
+    .price {
+        margin: 20px 0;
+    }
+    
+}
+
+
+@media (max-width: 500px) {
+
+    .right-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper {
+        width: 90%;
+        border-radius: 15px;
+    }
+    .top {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 10px;
+    }
+
+    .left-content .collectionImage img{
+        width: 100%;
+        height: 300px;
+    }
+
+
+
+    .right-bottom {
+        height: auto;
+    }
+    .left-top p {
+        font-size: 1rem;
+        width: 300px;
+    }
+
+
+    button, #connectButton, .counter{
+        width: 100%;
+    }
+
+    .bottom {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 10px;
+    }
+
+    .bottom p {
+        font-size: 0.8rem;
+    }
+}
